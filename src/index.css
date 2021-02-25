@@ -1,13 +1,206 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar{
+   
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: radial-gradient(rgb(212, 211, 211) , rgb(175, 172, 170) );
+    background-size: 5px 5px;
+}
+.nav{
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ height: 100px;
+}
+.components{
+display: flex;
+flex-direction: row;
+}
+.components button {
+    margin: 0 30px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+.container{
+    width: 90%;
+    max-width: 998px;
+    margin: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo{
+    font-size: 26px;
+    font-weight: 700;
+    color: rgb(18, 224, 231);
+    text-shadow: 0 0 20px rgb(7, 154, 180);
+}
+.components button{
+    text-decoration:none;
+    text-shadow:  0 0 8px rgb(71, 216, 241);
+    text-transform: uppercase;
+    font-size: 22px;
+    color: rgb(92, 235, 211);
+}
+.components button:hover{
+    cursor: pointer;
+}
+.listOfCoctails{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+
+
+
+}
+.card{
+width: 400px;
+margin:  50px auto;
+padding: 18px 8px;
+border-radius: 20px;
+border: 2px solid rgb(192, 192, 207);
+position: relative;
+transition: background-color 0.3s linear;
+}
+.card:hover{
+    background-color: rgba(0, 0, 0,0.1);
+}
+body{
+    background-image: linear-gradient(45deg, rgb(224, 220, 220), rgb(194, 194, 192));
+    background-size: 5px 5px;
+}
+.card img{
+width: 100%;
+border-radius: 20px;
+}
+.card .name{
+    position: absolute;
+    top:18px;
+    left:8px;
+    font-size: 29px;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    border-radius: 20px;
+}
+.description {
+    text-align: center;
+    min-width: 180px;
+    margin: 40px auto 20px;
+    height: 50px;
+    background-color: rgb(15, 212, 15);
+    transition: background-color 0.6s ease;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative
+}
+@keyframes anime{
+    0%{
+        left:-100px;
+    }
+    100%{
+        left: 300px;
+    }
+}
+.description:hover {
+  
+    background-color: rgb(57, 226, 57);
+}
+.description button{
+    line-height: 50px;
+    text-align: center;
+    font-size: 33px;
+    font-weight: 800;
+    text-align: center;
+    color: rgb(212, 212, 212);
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+}
+.description:hover button{
+     position: absolute;
+     top: 3px;
+     left:-100px;
+     animation: anime 7s linear infinite;
+}
+.aboutus{
+
+    font-size: 27px;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(70, 59, 57);
+    word-spacing:3px;
+    letter-spacing: 1.3px;
+}
+.us{
+    font-size: 39px;
+    font-weight: 800;
+    text-align: center;
+    margin: 50px;
+    color: rgb(68, 30, 3);
+    text-shadow: 1px 1px 16px green;
+}
+.Error{
+    text-align: center;
+}
+.Error button{
+width: 260px;
+height: 80px;
+font-size: 40px;
+line-height: 80px;
+background-color: rgb(36, 182, 17);
+outline: none;
+border: none;
+border-radius: 20px;
+margin: 100px 0 20px;
+}
+.Error button:hover{
+    cursor: pointer;
+    background-color: rgb(42, 133, 54);
+    transition: all 0.3s ease-in-out;
+}
+.Error p{
+    
+    padding: 50px;
+    font-size: 30px;
+    font-weight: 800;
+    color: red;
+    text-shadow: 2px 2px 17px red;
+
+}
+.card-in{
+width: 500px;
+}
+.desc{
+    background-color: transparent;
+    font-size: 30px;
+    font-weight: 700;
+    height: auto;
+}
+.searchingbox{
+    text-align: center;
+}
+.input{
+    width: 300px;
+    font-size: 30px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 2px dashed rgb(28, 209, 5);
+outline: none;
+margin: 50px 0 0;
+color: rgb(22, 212, 31);
+}
+@media (max-width:1220px){
+
+.listOfCoctails{
+    grid-template-columns: repeat(2,1fr);
+}
+}
+@media (max-width:860px) {
+
+    .listOfCoctails {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
